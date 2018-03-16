@@ -18,6 +18,11 @@
         theme.comment.valine.appId && 
         theme.comment.valine.appKey) { %>
         <section id="comments"><%- partial('comment/valine') %></section>
+    <% } else if (theme.comment.valine_kinvey && 
+        theme.comment.valine_kinvey.on && 
+        theme.comment.valine_kinvey.appSecret && 
+        theme.comment.valine_kinvey.appKey) { %>
+        <section id="comments"><%- partial('comment/valine-kinvey') %></section>
     <% } else if (theme.comment.gitment &&
         theme.comment.gitment.owner &&
         theme.comment.gitment.repo &&

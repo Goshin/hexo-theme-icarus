@@ -1,0 +1,26 @@
+<% if (typeof(script) !== 'undefined' && script) { %>
+    <script>
+        window.VALINECONFIG = {
+            el: '#valine-thread' ,
+            app_secret: '<%= theme.comment.valine_kinvey.appSecret %>',
+            app_key: '<%= theme.comment.valine_kinvey.appKey %>',
+        };
+    </script>
+    <script src="//cdn.jsdelivr.net/gh/Goshin/Valine-Kinvey@k-1.0.3/dist/Valine-loader.min.js"></script>
+<% } else { %>
+    <style>
+        @media screen and (min-width: 560px) {
+            .valine div.vwrap {
+                margin: -20px -20px 10px -20px;
+                padding: 20px;
+            }
+            #comments {
+                border-radius: 4px;
+            }
+        }
+        textarea.veditor.vinput {
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        }
+    </style>
+    <div id="valine-thread"></div>
+<% } %>

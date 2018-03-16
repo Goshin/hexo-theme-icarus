@@ -23,4 +23,9 @@
         theme.comment.valine.appId && 
         theme.comment.valine.appKey) { %>
     <%- partial('comment/valine', { script: true }) %>
+<% } else if (theme.comment.valine_kinvey && 
+        theme.comment.valine_kinvey.on && 
+        theme.comment.valine_kinvey.appSecret && 
+        theme.comment.valine_kinvey.appKey) { %>
+    <%- partial('comment/valine-kinvey', { script: true }) %>
 <% } %>
